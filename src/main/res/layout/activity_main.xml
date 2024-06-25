@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="74dp"
+        android:layout_height="83dp"
+        android:background="@drawable/playbtn"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/img4"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/img1"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toStartOf="@+id/img1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494"
+        tools:ignore="NotSibling" />
+
+    <Button
+        android:id="@+id/under"
+        android:layout_width="83dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:background="#081A7E"
+
+        android:text="Under  7 x2.3"
+        android:textColor="#DDD5C9"
+        android:textSize="18dp"
+
+        android:textStyle="bold"
+        android:onClick="underClick"
+        app:layout_constraintEnd_toEndOf="@+id/img1"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img1"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/over"
+        android:layout_width="83dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:text="Over  7 x2.3"
+        android:textSize="18dp"
+        android:onClick="overClick"
+        android:textStyle="bold"
+        android:textColor="#F3E3CB"
+        android:background="#081A7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="@+id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="83dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:text="Equal  7   x5"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:onClick="equalClick"
+        android:textColor="#F3E3CB"
+        android:background="#081A7E"
+        app:layout_constraintEnd_toStartOf="@+id/img2"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+    <EditText
+        android:id="@+id/wallet"
+        android:layout_width="83dp"
+        android:layout_height="27dp"
+        android:background="@drawable/button"
+        android:drawableRight="@drawable/plus1"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/img2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <Button
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/bet_amt_btn_background"
+        android:text="MIN"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/under"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/twice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bet_amt_btn_background"
+        android:text="X2"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+
+        app:layout_constraintEnd_toStartOf="@+id/divide"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/min"
+        app:layout_constraintTop_toBottomOf="@+id/equal"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/bet_amt_btn_background"
+
+        android:text="/2"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/over"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="112dp"
+        android:layout_height="38dp"
+        android:text=""
+        android:textAlignment="center"
+
+        android:textColor="#D89012"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/wallet"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/WinBal"
+        android:layout_width="108dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="92dp"
+        android:text=""
+        android:textColor="#52E858"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/wallet"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/wallet"
+        app:layout_constraintTop_toBottomOf="@+id/wallet" />
+
+
+    <TextView
+        android:id="@+id/betAmt"
+        android:layout_width="118dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shap_of_btn"
+
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="@+id/twice"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="@+id/min" />
+
+    <Button
+        android:id="@+id/addAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Bal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wallet"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
